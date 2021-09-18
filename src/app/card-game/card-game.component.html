@@ -1,0 +1,75 @@
+<app-topbar></app-topbar>
+<div class="bg">
+    <div class="container pt-5">
+        <h1 class="page-title">ให้ฉันทำอะไรดี ?</h1>
+    </div>
+    <div class="overlay-text">
+        Click to Start
+    </div>
+    <div id="game-over-text" class="overlay-text">
+        GAME OVER
+        <span class="overlay-text-small">Click to Restart</span>
+    </div>
+    <div id="victory-text" class="overlay-text">
+        VICTORY
+        <span class="overlay-text-small">Click to Restart</span>
+    </div>
+    <div class="game-container">
+        <!-- <div class="row mb-3">
+            <div class="col text-end" style="font-size: 15px;">
+                <i class="fas fa-plus"></i>
+                <span class="inline-block ms-2">เพิ่มคำสั่งในการ์ด</span>
+            </div>
+        </div> -->
+        <div class="card d-block">
+            <div class="content">
+                <div class="card-front">
+                    <div class="middle">
+                        <i class="fas fa-question"></i>
+                        <span class="d-block ">Random</span>
+                    </div>
+
+                </div>
+                <div class="card-back">
+                    <i class="fas fa-info "></i> <span class="inline-block ms-2">วิธีการเล่น</span>
+                    <tr>
+                        <td class="lh-1 px-2">- กดสุ่มการ์ดเพื่อรับคำสั่ง</td>
+                    </tr>
+                    <tr>
+                        <td class="lh-1 px-2 pt-3">- สามารถเพิ่ม / ลบ คำสั่งที่ต้องการได้</td>
+                    </tr>
+                    <!-- <span class="d-block lh-2 fs-6">- ไม่ทำตามคำสั่งในการ์ดที่เปิดได้ ดื่มหมดแก้ว</span> -->
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="randombutton" (click)="randomGame()">
+        <img src="./assets/images/randomcard.png" width="200px" height="90px">
+    </div>
+    <!-- Side Links Only -->
+    <!-- <div class="side-links">
+        <a href="https://youtu.be/28VfzEiJgy4" target="_blank" class="side-link side-link-youtube">
+            <i class="gg-youtube"></i>
+        </a>
+        <a href="https://github.com/WebDevSimplified" target="_blank" class="side-link side-link-github side-link-icon">
+            <i class="fab fa-github-square"></i>
+            <span class="side-link-text">View GitHub</span>
+        </a>
+        <a href="https://twitter.com/DevSimplified" target="_blank" class="side-link side-link-twitter">
+            <i class="fab fa-twitter-square side-link-icon"></i>
+            <span class="side-link-text">View Twitter</span>
+        </a>
+    </div> -->
+
+    <div class="footer-basic w-100">
+        <div class="col text-end px-3 text-menu">
+            <span class="inline-block" (click)="open(content)"><i class="fas fa-plus me-2"></i>เพิ่มคำสั่งในการ์ด</span>
+        </div>
+    </div>
+
+
+    <ng-template #content let-c="close" let-d="dismiss">
+        <app-modal-add></app-modal-add>
+    </ng-template>
+   

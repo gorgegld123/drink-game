@@ -1,0 +1,16 @@
+<form [formGroup]="addCommandForm">
+    <div class="wrapper">
+        <div class="input-data">
+            <input formControlName="rate" type="text" required>
+            <div class="underline"></div>
+            <label for="text">ประเภท</label>
+        </div>
+    </div>
+    <div class="wrapper mb-5">
+        <div class="input-data">
+            <textarea formControlName="detail" type="text" rows="5"></textarea>
+            <label for="text">รายละเอียด</label>
+        </div>
+    </div>
+</form>
+<button type="button" class="button" (click)="onSubmit()">เพิ่ม</button>
