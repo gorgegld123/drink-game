@@ -26,6 +26,11 @@ export class CardGameComponent implements OnInit {
   }
 
 
+  add(){
+    console.log(this.commandList);
+    
+  }
+
 
   randomGame () {
     this.flipStatus = true
